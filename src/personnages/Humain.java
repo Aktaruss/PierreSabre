@@ -20,11 +20,11 @@ public class Humain {
 	}
 
 	public void parler(String texte) {
-		System.out.println(texte);
+		System.out.println("(" + nom + ") - " +texte);
 	}
 
 	public void direBonjour() {
-		parler("Bonjour ! Je m appelle " + nom + " et j aime boire du " + boissonFavorite);
+		parler("Bonjour ! Je m appelle " + nom + " et j aime boire du " + boissonFavorite + ".");
 	}
 
 	public void boire() {
@@ -36,8 +36,8 @@ public class Humain {
 			parler("J ai " + argent + " sous en poche. Je vais pouvoir m offrir " + bien + " a " + prix + " sous.");
 			perdreArgent(prix);
 		} else {
-			parler("Je n ai plus que " + argent + " sous en poche. Je ne peux meme pas m offrir " + bien + " a "
-					+ prix + " sous.");
+			parler("Je n ai plus que " + argent + " sous en poche. Je ne peux meme pas m offrir " + bien + " a " + prix
+					+ " sous.");
 		}
 	}
 
