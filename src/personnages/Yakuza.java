@@ -17,5 +17,6 @@ public class Yakuza extends Humain {
 		super.gagnerArgent(vol);
 		super.parler("J ai pique les " + vol + " sous de " + victime.getNom() + ", ce qui me fait " + super.getArgent()
 				+ " sous dans ma poche. Hi ! Hi!");
+		reputation++;
 	}
 }
