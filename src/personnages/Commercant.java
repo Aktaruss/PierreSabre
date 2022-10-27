@@ -7,8 +7,7 @@ public class Commercant extends Humain {
 	}
 
 	public int seFaireExtorquer() {
-		int argentVole;
-		argentVole = super.getArgent();
+		int argentVole = super.getArgent();
 		super.perdreArgent(argentVole);
 		super.parler("J ai tout perdu! Le monde est trop injuste...");
 		return argentVole;
