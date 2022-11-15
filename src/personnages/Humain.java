@@ -2,7 +2,7 @@ package personnages;
 
 public class Humain {
 	public static final int MEMOIREMAX = 30;
-	
+
 	private String nom;
 	private String boissonFavorite;
 	private int argent;
@@ -24,7 +24,7 @@ public class Humain {
 	}
 
 	protected void parler(String texte) {
-		System.out.println("(" + nom + ") - " +texte);
+		System.out.println("(" + nom + ") - " + texte);
 	}
 
 	public void direBonjour() {
@@ -52,40 +52,40 @@ public class Humain {
 	protected void perdreArgent(int perte) {
 		argent -= perte;
 	}
-	
+
 	public void faireConnaissanceAvec(Humain humain) {
 		direBonjour();
 		humain.repondre(this);
 		memoriser(humain);
-		
+
 	}
-	
+
 	private void memoriser(Humain humain) {
 		if (nbConnaissance < MEMOIREMAX) {
-			memoire[nbConnaissance] = humain ;
-			nbConnaissance++ ;
+			memoire[nbConnaissance] = humain;
+			nbConnaissance++;
 		} else {
-			for (int i = 0; i < nbConnaissance - 1 ; i++) {
-				memoire[i] = memoire[i+1];
+			for (int i = 0; i < nbConnaissance - 1; i++) {
+				memoire[i] = memoire[i + 1];
 			}
-			memoire[nbConnaissance - 1] = humain ;
+			memoire[nbConnaissance - 1] = humain;
 		}
 	}
-	
+
 	private void repondre(Humain humain) {
 		direBonjour();
 		memoriser(humain);
 	}
-	
+
 	public void listerConnaissance() {
 		String texte = "Je connais beaucoup de personne dont : ";
 		for (int i = 0; i < nbConnaissance; i++) {
 			texte += memoire[i].getNom();
-			if (i+1 < nbConnaissance) {
+			if (i + 1 < nbConnaissance) {
 				texte += ",";
 			}
 		}
 		parler(texte);
 	}
-	
+
 }
