@@ -11,7 +11,7 @@ public class Ronin extends Humain {
 		int don;
 		don = super.getArgent() / 10;
 		super.perdreArgent(don);
-		super.parler(beneficiaire.getNom() + " prends ces " + don + " sous.");
+		parler(beneficiaire.getNom() + " prends ces " + don + " sous.");
 		beneficiaire.recevoir(don);
 	}
 
